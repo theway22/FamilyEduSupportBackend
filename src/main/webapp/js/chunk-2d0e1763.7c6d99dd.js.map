@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/admin/images/weipayimg.jpg"],"names":["module","exports"],"mappings":"qGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-2d0e1763.7c6d99dd.js","sourcesContent":["module.exports = __webpack_public_path__ + \"img/weipayimg.c5c90341.jpg\";"],"sourceRoot":""}

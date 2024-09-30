@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/admin/images/topright.jpg"],"names":["module","exports"],"mappings":"qGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-2d0ccbd2.990d5fc0.js","sourcesContent":["module.exports = __webpack_public_path__ + \"img/topright.6924e39a.jpg\";"],"sourceRoot":""}

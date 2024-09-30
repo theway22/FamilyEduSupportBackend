@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/admin/images/chat/box_head.jpg"],"names":["module","exports"],"mappings":"oGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-7728760f.e5f792fb.js","sourcesContent":["module.exports = __webpack_public_path__ + \"img/box_head.eba71c52.jpg\";"],"sourceRoot":""}

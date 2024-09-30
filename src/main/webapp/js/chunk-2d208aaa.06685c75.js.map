@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/admin/images/loader.gif"],"names":["module","exports"],"mappings":"mGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-2d208aaa.06685c75.js","sourcesContent":["module.exports = __webpack_public_path__ + \"img/loader.dfd02339.gif\";"],"sourceRoot":""}

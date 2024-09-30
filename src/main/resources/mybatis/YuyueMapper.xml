@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daowen.mapper.YuyueMapper">
+
+
+    <select id="getEntityPlus" resultType="yuyue">
+                 select  yy.*,
+                    h.accountname as hyaccount,
+                    h.name as hyname,
+                    sh.tno as taccount,
+                    sh.name as tname
+                  from  yuyue yy
+                 left join huiyuan h
+                 on h.id=yy.hyid
+                 left join teacher sh
+                 on sh.id=yy.targetid
+                 where  1=1
+                 <if test="title!=null">
+                     and title like '%${title}%'
+                 </if>
+                 <if test="hyid!=null">
+                     and yy.hyid=#{hyid}
+                 </if>
+                <if test="targetid!=null">
+                    and yy.targetid=#{targetid}
+                </if>
+      </select>
+
+    <select id="loadPlus" resultType="yuyue">
+                select  yy.*,
+                    h.accountname as hyaccount,
+                    h.name as hyname,
+                    sh.tno as taccount,
+                    sh.name as tname
+                  from  yuyue yy
+                 left join huiyuan h
+                 on h.id=yy.hyid
+                 left join teacher sh
+                 on sh.id=yy.targetid
+                 where  yy.id=#{id}
+      </select>
+
+
+</mapper>
+
+

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/admin/images/background-4.jpg"],"names":["module","exports"],"mappings":"mGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-2d20faa6.b28f6831.js","sourcesContent":["module.exports = __webpack_public_path__ + \"img/background-4.8e57acc1.jpg\";"],"sourceRoot":""}

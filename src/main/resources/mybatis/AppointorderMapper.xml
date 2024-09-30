@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daowen.mapper.AppointorderMapper">
+
+
+      <select id="getEntityPlus"   resultType="appointorder">
+                 select  o.*,
+                   h.accountname as hyaccount,
+                   h.name as hyname,
+                   p.name as pname
+                  from  appointorder o
+                 left join huiyuan h
+                 on h.id=o.hyid
+                 left join shangpin p
+                 on p.id=o.targetid
+
+                 where  1=1
+                 <if test="ddno!=null">
+                     and o.ddno like '%${ddno}%'
+                 </if>
+                 <if test="hyid!=null">
+                     and o.hyid=#{hyid}
+                 </if>
+                  <if test="shid!=null">
+                      and p.pubren=#{shid}
+                  </if>
+
+
+      </select>
+      
+       <select id="loadPlus"   resultType="appointorder">
+                select  o.*,
+                   h.accountname as hyaccount,
+                   h.name as hyname,
+                   p.name as pname
+                  from  appointorder o
+                 left join huiyuan h
+                 on h.id=o.hyid
+                 left join shangpin p
+                 on p.id=o.targetid
+                 where  o.id=#{id}
+      </select>
+      
+
+
+</mapper>
+
+

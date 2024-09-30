@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/admin/images/default_tou.gif"],"names":["module","exports"],"mappings":"mGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-2d0c89d4.81f9eae2.js","sourcesContent":["module.exports = __webpack_public_path__ + \"img/default_tou.2732367f.gif\";"],"sourceRoot":""}

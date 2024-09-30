@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daowen.mapper.FansMapper">
+
+
+    <select id="getStars" parameterType="int" resultType="com.daowen.vo.GuanzhuVo">
+
+           select t.*,f.id as gzid,f.targetid ,f.actionid
+           from
+           teacher t , fans f
+          where t.id=f.targetid
+          and f.actionid=#{id}
+
+
+     </select>
+
+
+
+    <select id="getFans" parameterType="int" resultType="huiyuan">
+          select h.* from huiyuan h ,
+          fans f
+          where h.id=f.actionid
+          and f.targetid=#{userid}
+
+     </select>
+      
+
+
+
+</mapper>
+
+

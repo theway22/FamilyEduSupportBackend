@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daowen.mapper.SysconfigMapper">
+
+    <resultMap id="rmSysconfig" type="com.daowen.vo.SysconfigVo">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <collection property="cfgitems"  select="getSysconfigitem" ofType="com.daowen.entity.Sysconfigitem"  column="{id=id}" >
+        </collection>
+    </resultMap>
+
+
+    <select id="getSysconfigitem" parameterType="map" resultType="sysconfigitem">
+        select
+        ci.*
+        from sysconfigitem  ci
+        where 1=1
+        <if test="id!=null">
+            and ci.cfgid=#{id}
+        </if>
+        <if test="title!=null">
+            and  ci.title like '%${title}%'
+        </if>
+
+    </select>
+
+
+    <select id="getEntityPlus" parameterType="map" resultMap="rmSysconfig">
+        select c.*
+        from sysconfig c
+        where 1=1
+        <if test="name!=null">
+            and  c.name like '%${name}%'
+        </if>
+
+    </select>
+
+
+    <select id="loadPlus" parameterType="map" resultMap="rmSysconfig">
+        select c.*
+        from sysconfig c
+        where 1=1
+        <if test="id!=null">
+            and  c.id =#{id}
+        </if>
+
+    </select>
+
+</mapper>

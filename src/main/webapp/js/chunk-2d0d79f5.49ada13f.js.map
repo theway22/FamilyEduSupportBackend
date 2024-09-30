@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/admin/images/toolbar-bg.png"],"names":["module","exports"],"mappings":"mGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-2d0d79f5.49ada13f.js","sourcesContent":["module.exports = __webpack_public_path__ + \"img/toolbar-bg.fbe4412d.png\";"],"sourceRoot":""}
